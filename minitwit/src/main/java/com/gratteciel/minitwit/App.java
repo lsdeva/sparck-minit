@@ -8,13 +8,14 @@ import com.gratteciel.minitwit.config.WebConfig;
 import com.gratteciel.minitwit.service.impl.MiniTwitService;
 
 @Configuration
-@ComponentScan({ "com.minitwit" })
+@ComponentScan({ "com.gratteciel.minitwit" })
 public class App {
 	
 	public static void main(String[] args) {
     	AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(App.class);
     	new WebConfig(ctx.getBean(MiniTwitService.class));
         ctx.registerShutdownHook();
+        System.out.println("DFGHJ");
     }
     
     

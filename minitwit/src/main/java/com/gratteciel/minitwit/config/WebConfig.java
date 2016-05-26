@@ -45,6 +45,7 @@ public class WebConfig {
 		 *  as all the messages of followed users.
 		 */
 		get("/", (req, res) -> {
+			System.out.println(req);
 			User user = getAuthenticatedUser(req);
 			Map<String, Object> map = new HashMap<>();
 			map.put("pageTitle", "Timeline");
@@ -66,6 +67,9 @@ public class WebConfig {
 		 * Displays the latest messages of all users.
 		 */
 		get("/public", (req, res) -> {
+			System.out.println("public");
+//			System.out.println(req.userAgent());
+			
 			User user = getAuthenticatedUser(req);
 			Map<String, Object> map = new HashMap<>();
 			map.put("pageTitle", "Public Timeline");
