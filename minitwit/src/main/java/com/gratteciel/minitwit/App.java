@@ -15,7 +15,6 @@ public class App {
     	AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(App.class);
     	new WebConfig(ctx.getBean(MiniTwitService.class));
         ctx.registerShutdownHook();
-        System.out.println("DFGHJ");
     }
     
     
